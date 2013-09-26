@@ -253,7 +253,7 @@ static SFPseq nextSeq (SFPseq seq) {
 }
 
 static SFPframetype getFrameType (SFPheader header) {
-  return (header >> SFP_FIRST_CONTROL_BIT) & ((1 << SFP_NUM_CONTROL_BITS) - 1);
+  return static_cast<SFPframetype>((header >> SFP_FIRST_CONTROL_BIT) & ((1 << SFP_NUM_CONTROL_BITS) - 1));
 }
 
 static SFPseq getFrameSeq (SFPheader header) {

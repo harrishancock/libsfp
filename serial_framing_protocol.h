@@ -61,12 +61,12 @@ enum {
 #define SFP_SEQ_RANGE (1 << SFP_NUM_SEQ_BITS)
 #define SFP_INITIAL_SEQ 0
 
-typedef enum {
+enum SFPframetype {
   SFP_FRAME_USR = 0,
   SFP_FRAME_RTX,
   SFP_FRAME_NAK,
   SFP_FRAME_SYN
-} SFPframetype;
+};
 
 enum {
   SFP_SEQ_SYN0 = 0,
